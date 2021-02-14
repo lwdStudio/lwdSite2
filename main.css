@@ -16,7 +16,7 @@ body, html{
 }
 
 .i-lwdlogo-lg {
-    background-image: url(img/lwd-stamp.png);
+    background-image: url(/img/lwd-stamp.png);
     background-repeat: no-repeat;
     background-size: 20%;
     align-items: center;
@@ -25,14 +25,14 @@ body, html{
 
 .i-lwdlogo-inline {
     display: inline;
-    background: url(img/lwd-stamp.png) 0 0 no-repeat;
+    background: url(/img/lwd-stamp.png) 0 0 no-repeat;
     background-size: 22px;
     padding: 0 0 0 1.8em;
 }
 
 .i-lwdlogo-inline-18 {
     display: inline;
-    background: url(img/lwd-stamp.png) 0 0 no-repeat;
+    background: url(/img/lwd-stamp.png) 0 0 no-repeat;
     background-size: 30px;
     padding: 0 0 0 1.8em;
 }
@@ -41,7 +41,7 @@ body, html{
     display: inline;
     padding: 0 0 0 1.5em;
     bottom: 1px;
-    background: url(img/备案图标.png) 0 0 no-repeat;
+    background: url(/img/备案图标.png) 0 0 no-repeat;
 }
 
 .bg{
