@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!--BootStrap4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- <script src='main.js'></script> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#c91f37">
+    <link rel="shortcut icon" href="../img/favicon/favicon.ico">
+    <script src="https://kit.fontawesome.com/546cc904e7.js" crossorigin="anonymous"></script>
+    <title>Resume</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../main.css'>
+
+</head>
+<body class="position-relative" data-spy="scroll" data-target="#resume-nav" data-offset="45">
+    <header>
+            <nav class="bg-black " style="overflow: hidden; ">
+                <div style="padding: 1.4em; position:absolute"><a href="/" class="i-lwdlogo-inline-18 color-white" style="font-size: 20px;" title="Back to Home Page">简历 <sup>测试</sup></a></div>
+                <ul class="horizontal" style="padding-top: 1.5em; padding-bottom: 1.5em; margin: 0; float: right;">
+                    <li style="padding-right: 1.5em;"><a href="/resume/" class="color-white">Resume 简历</a></li>
+                    <li style="padding-right: 1.5em;"><a href="https://www.liwenduan.com/blog/" class="color-white">lwdBlog 博客</a></li>
+                    <li style="padding-right: 1.5em;"><a href="https://photo.liwenduan.com" class="color-white"><i class="fas fa-image"></i> lwdPhoto 图片</a></li>
+                    <li style="padding-right: 1.5em;"><a href="https://hufflepuff.liwenduan.com/config/" class="color-white"><i class="fas fa-cog"></i> Config 配置（需认证）</a></li>
+                </ul>
+            </nav>
+    
+    </header>
+    <button class="back-to-top" href="#"><i class="fas fa-arrow-up"></i></button>
+    <div class="container" style="background-color: white;">
+        <div class="row">
+            <div class="col-lg-auto">
+                <aside class="sticky text-md-center" style="padding: 1em; background-color: #f5f5f5; border-radius: 5px;">
+                    <img src="../img/profile.jpg" class="profile-pic center" >
+                    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">段力文</h1>
+                    <ul style="list-style-type: none;">
+                        <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+13154504201">(315)450-4201</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:hi@liwenduan.com">hi@liwenduan.com</a></li>
+                        <li><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/lwd">我的领英档案</a></li>
+                    </ul>
+                    <div id="resume-nav" class="list-group card">
+                        <a class="list-group-item list-group-item-action" href="#about">关于我</a>
+                        <a class="list-group-item list-group-item-action" href="#education">教育经历</a>
+                        <a class="list-group-item list-group-item-action" href="#experience">工作经历</a>
+                        <!-- <a class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="true" aria-controls="list" data-target="#list" href="#experience">Experience</a> -->
+                            <!-- <div class="collapse show" id="list">
+                            <a class="list-group-item list-group-item-action" href="#work-1">Undergraduate TA</a>
+                            <a class="list-group-item list-group-item-action" href="#work-2">Intership</a>
+                            <a class="list-group-item list-group-item-action" href="#work-3">Director at LuheITV</a>
+                            </div> -->
+                        <a class="list-group-item list-group-item-action" href="#project">个人项目</a>
+                        <a class="list-group-item list-group-item-action" href="#skill">技术技能</a>
+                        </div>
+                </aside>
+    
+            </div>
+
+            <main class="col-lg" style="padding: 1em;">
+                <section id="about" class="full-height ease-in-out">
+                    <div>
+                        <h2>关于我</h2>
+                        <p>我是一名在雪城大学信息管理学院攻读 信息管理与技术专业（Information Management & Technology）的在读学生。我学习如何使用科技来改变我们的生活。拥有好的技术可以帮助企业和个人能够更好的完成他们所想去做的。我想利用我所学的知识为这些企业带来这些改变。
+                        </p>
+                        <p> 我曾经在学生电视台的经历让我也在关注新媒体行业的发展。这是一个新兴行业，为这个世界提供了一个为自己发声的渠道。人们现在可以通过互联网自由分享自己的观点与看法，让更多的人去收获一个全新的观察这个世界的角度。同时，我认为利用信息技术与文化创意两个产业的结合可以帮助这个行业的人能够产出更多更好的内容，这也可能是一个全新的发展方向。
+                        </p>
+                        <h2>关注我</h2>
+                        <div class="row padding">
+                            <a class="col" href="https://www.instagram.com/liwenduan"><i class="fab fa-instagram fa-2x" title="Instagram @liwenduan" aria-hidden="true"></i> @liwenduan</a>
+                            <a class="col" href="https://www.weibo.com/tiancaishaonianbao"><i class="fab fa-weibo fa-2x" title="微博 @Keyboard酱" aria-hidden="true"></i> @Keyboard酱</a>
+                            <a class="col" href="https://space.bilibili.com/13643915"><i class="ri-bilibili-fill ri-2x" title="哔哩哔哩 @Keyboard酱" aria-hidden="true"></i> @Keyboard酱</a>
+                    </div>
+                </section>
+                <section id="education" class="full-height">
+                    <h2>教育经历</h2>
+                    <h3 class="syracuse">雪城大学</h3>
+                    <p>
+                        信息管理学院 iSchool<span class="date"> 即将于2021年5月毕业 </span> <br>
+                        理学学士， 信息管理与技术
+                    </p>
+
+                    <p>
+                        <b>相关课程与部分课业结果（仅提供英文版本）：</b>
+                        <ul>
+                            <li>IST 263: Intro to Front-End Web Dev: HTML and CSS Skills <a href="https://liduan-su.github.io/ist263-spring-2020/" target="_blank" class="rounded-border-right">Course Work Demo</a></li><br>
+                            <li>IST 486: Social Media in the Organiz. <a href="https://facebook.com/upstatehikes/" target="_blank" class="rounded-border-right">Course Work Demo</a></li><br>
+
+                            <li>IST 363: Advanced Front End Web Design: PHP, JavaScript Skills, and Theming for WordPress <span class="rounded-border-right">Ongoing</span></li><br>
+                        </li>
+                            <li>IST 341: Human Centered Design <span class="rounded-border-right">Ongoing</span></li><br>
+                        </ul>
+                    
+                    </p>
+                </section>
+                <section id="experience" class="full-height">
+                    <h2>工作经历</h2>
+                        <section id="work-1">
+                            <h3>本科助教</h3>
+                            <p>
+                            <span class="syracuse">雪城大学</span>，信息管理学院 iSchool
+                            <span class="date"> 2019年9月 - 2019年12月 </span>
+                            </p>
+                            <ul>
+                                <li>准备和核查每周实践课程的内容完整度和准确性</li>
+                                <li>帮助超过一百名的学生使用 Cisco Packet Tracer（网络模拟软件）, Linux（操作系统）, Wireshark（网络数据包分析软件）, Vsphere（虚拟化软件）。</li>
+                                <li>帮助学生理解关于网络的知识内容</li>
+                                <li>参与编写实践内容步骤说明以帮助学生完成课程内容</li>
+                            </ul>
+                        </section>
+                        <section id="work-2">
+                            <h3>Dining Hall Student Employee</h3>
+                            <p>
+                            <span class="syracuse">Syracuse University</span> Food Services
+                            <span class="date"> Oct 2018 - May 2019 </span>
+                            </p>
+                            <ul>
+                                <li>Worked as part of a team to help the dining hall run smoothly</li>
+                                <li>Performed serving, cleaning, and stocking duties in order to facilitate customer service</li>
+                                <li>Assisted with meal preparation</li>
+                                <li>Assisted with the cleanliness of the dining hall</li>
+                            </ul>
+                        </section>                   
+                </section>
+                <section id="project" class="full-height">
+                    <h2>个人项目</h2>
+                        <section id="project-1">
+                            <p>
+                            我的个人网站（包括本网站liwenduan.com以及lwdmail.com）
+                            <span class="date"> 从2016年至今 </span>
+                            </p>
+                            <ul>
+                                <li>自学如何部署LNMP服务环境</li>
+                                <li>自学如何在云端服务器上部署WordPress网站</li>
+                                <li>自学使用Certbot部署诸如为加密HTTPS网站所使用的SSL证书</li>
+                            </ul>
+                        </section>
+                </section>
+                <section id="skill" class="full-height">
+                    <h2>技术技能</h2>
+                    <h3>编程语言</h3>
+                    <div class="row padding">
+                        <div class="col"><i class="fab fa-python fa-3x" title="Python" aria-hidden="true"></i><span class="sr-only">Python</span></div>
+                        <div class="col"><i class="fab fa-r-project fa-3x" title="R" aria-hidden="true"></i><span class="sr-only">R</span></div>
+                        <div class="col"><i class="fab fa-html5 fa-3x" title="HTML5" aria-hidden="true"></i><span class="sr-only">HTML5</span></div>
+                        <div class="col"><i class="fab fa-css3-alt fa-3x" title="CSS3" aria-hidden="true"></i><span class="sr-only">CSS3</span></div>
+                    </div>
+                    <br>
+
+                    <h3>操作系统</h3>
+                    <div class="row padding">
+                        <div class="col"><i class="fab fa-ubuntu fa-3x" title="Ubuntu" aria-hidden="true"></i><span class="sr-only">Ubuntu</span></div>
+                        <div class="col"><i class="fab fa-windows fa-3x" title="Windows" aria-hidden="true"></i><span class="sr-only">Windows</span></div>
+                        <div class="col"><i class="fab fa-apple fa-3x" title="macOS" aria-hidden="true"></i><span class="sr-only">macOS</span></div>
+                    </div>
+                    <br>
+
+                    <h3>软件技能</h3>
+                    <div class="row padding">
+                        <div class="col"><i class="fab fa-wordpress fa-3x" title="WordPress 的使用" aria-hidden="true"></i><span class="sr-only">WordPress</span></div>
+                        <div class="col"><i class="fab fa-aws fa-3x" title="Amazon Web Services: SES and EC2" aria-hidden="true"></i><span class="sr-only">Amazon Web Services</span></div>
+                        <div class="col"><i class="fab fa-markdown fa-3x" title="Markdown" aria-hidden="true"></i><span class="sr-only">Markdown</span></div>
+                    </div>
+                    <br>
+                    <div class="row padding">
+                        <div class="col"><i class="fas fa-file-excel fa-3x" title="Microsoft Excel" aria-hidden="true"></i><span class="sr-only">Microsoft Excel</span></div>
+                        <div class="col"><i class="fas fa-file-word fa-3x" title="Microsoft PowerPoint" aria-hidden="true"></i><span class="sr-only">Microsoft Excel</span></div>
+                        <div class="col"><i class="fas fa-file-powerpoint fa-3x" title="Microsoft Word" aria-hidden="true"></i><span class="sr-only">Microsoft Excel</span></div>
+                    </div>
+                    <br>
+
+                    <h3>现在我正在学习的技能：</h3>
+                    <div class="row padding">
+                        <div class="col"><i class="fab fa-react fa-3x" title="ReactJS" aria-hidden="true"></i><span class="sr-only">ReactJS</span></div>
+                        <div class="col"><i class="fab fa-php fa-3x" title="php" aria-hidden="true"></i><span class="sr-only">php</span></div>
+                        <div class="col"><i class="fab fa-wordpress fa-3x" title="为WordPress 制作主题" aria-hidden="true"></i><span class="sr-only">WordPress</span></div>
+                    </div>
+                    <br>
+
+                    </section>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <div class="ftStyle" >
+            <ul class="horizontal">
+                <li><a href="https://www.liwenduan.com/tos/cn/cr/" target="_blank" class="color-white">版权所有 © 2021 Liwen Duan</a></li>
+                <li><a href="https://www.liwenduan.com/tos/cn/" target="_blank" class="color-white">网站使用条款</a></li>
+                <li><a href="/lang/" class="color-white"><i class="fas fa-globe"></i> 切换语言 | Change Language</a></li>
+                <li><a href="http://beian.miit.gov.cn/" target="_blank" class="color-white">鄂ICP备18006410号-2</a></li>
+                <!-- <li><a class="i-beian-inline text-white" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011202001176" target="_blank"> 京公网安备 11011202001176号 </a></li> -->
+            </ul>
+        </div>
+
+    </footer>
+
+
+
+</body>
+</html>
