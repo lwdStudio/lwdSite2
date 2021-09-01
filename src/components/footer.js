@@ -7,14 +7,19 @@ import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 const FooterText = ({children}) => {
     return (
         <div className="px-5 py-1 md:py-0">
-            <p className="flex text-gray-500 hover:text-gray-400 justify-center lg:justify-start">{children}</p>
+            <p className="flex text-gray-500 hover:text-gray-900 justify-center lg:justify-start">{children}</p>
         </div>
         
     )
 }
-const FooterLink = ({LinkTo, children}) => {
+const FooterLink = ({LinkTo, children},props) => {
+    if (LinkTo.startsWith('/')) {
+        return (
+            <FooterText><Link to={LinkTo} className="hover:text-black focus:text-black hover:bg-yellow-300 focus:bg-yellow-300" >{children}</Link></FooterText>
+        )
+    }
     return (
-        <FooterText><Link to={LinkTo} >{children}</Link></FooterText>
+        <FooterText><a href={LinkTo} className="hover:text-black focus:text-black hover:bg-yellow-300 focus:bg-yellow-300">{children}</a></FooterText>
     )
 }
 
@@ -34,7 +39,7 @@ const Footer = ({location, crumbLabel}) => {
                 }
             `}
             render={data => 
-                <footer className="p-1 bg-gray-100 shadow-sm rounded-lg" >
+                <footer className="p-1 bg-gray-100 shadow-sm rounded-lg z-50" >
                     <div className="flex space-x-2 h-auto px-8 py-2 justify-center lg:justify-start">
                         <StaticImage 
                         src="../images/lwd-stamp.png"
