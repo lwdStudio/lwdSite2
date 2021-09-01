@@ -34,5 +34,29 @@ module.exports = {
       },
     },
     'gatsby-plugin-postcss',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /static/ // See below to configure properly
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        defaultCrumb: {
+          // location: required and must include the pathname property
+          location: {
+            pathname: "/",
+          },
+          // crumbLabel: required label for the default crumb
+          crumbLabel: "lwdSite",
+          // all other properties optional
+          crumbSeparator: " > ",
+        },
+      },
+    },
   ]
 };

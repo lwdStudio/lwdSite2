@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 
-const Portfolio = () => {
+const Portfolio = ({location}) => {
   return (
-    <Layout pageTitle="Portfolio" pageType="Portfolio">
+    <Layout pageTitle="Portfolio" pageType="Portfolio" location={location}>
       <p>I'm making this by following the Gatsby Tutorial.</p>
     </Layout>
   )
