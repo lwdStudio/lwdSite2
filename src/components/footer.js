@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { LwdLink } from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
@@ -7,19 +7,14 @@ import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 const FooterText = ({children}) => {
     return (
         <div className="px-5 py-1 md:py-0">
-            <p className="flex text-gray-500 hover:text-gray-900 justify-center lg:justify-start">{children}</p>
+            <p className="flex text-gray-500 justify-center lg:justify-start">{children}</p>
         </div>
         
     )
 }
 const FooterLink = ({LinkTo, children},props) => {
-    if (LinkTo.startsWith('/')) {
-        return (
-            <FooterText><Link to={LinkTo} className="hover:text-black focus:text-black hover:bg-yellow-300 focus:bg-yellow-300" >{children}</Link></FooterText>
-        )
-    }
     return (
-        <FooterText><a href={LinkTo} className="hover:text-black focus:text-black hover:bg-yellow-300 focus:bg-yellow-300">{children}</a></FooterText>
+        <FooterText><LwdLink LinkTo={LinkTo} className="px-1.5 rounded-md" >{children}</LwdLink></FooterText>
     )
 }
 

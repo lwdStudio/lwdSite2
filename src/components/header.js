@@ -7,17 +7,13 @@ import Close from "./static/close.svg"
 
 const NavButton = ({LinkTo, children}) => {
     return (
-        <Link to={LinkTo}>
-            <button className="w-full md:w-28 p-3 my-2 md:m-3 text-center rounded-md shadow-md font-medium text-gray-700 hover:text-black focus:text-black hover:bg-yellow-300 focus:bg-yellow-300">
-                <span>{children}</span>
-            </button>
-        </Link>
+        <Link to={LinkTo} className="flex w-full md:w-28 p-3 my-3 md:m-3 justify-center rounded-md md:shadow-md font-medium text-gray-700 hover:text-black focus:text-black hover:bg-gray-100 focus:bg-yellow-300">{children}</Link>
     )
 }
 
 const LwdLogo = ({pageName}) => {
     return (
-        <Link to="/" className="flex  h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg hover:text-black focus:text-black hover:bg-yellow-300 focus:bg-yellow-300">
+        <Link to="/" className="flex h-auto p-2 focus:ring-2 focus:ring-yellow-300 rounded-lg focus:text-black focus:bg-yellow-300">
             <StaticImage
                 src="../images/lwd-stamp.png"
                 alt="Liwen Duan's Logo"
@@ -37,11 +33,11 @@ const Header = ({pageName='lwdSite'}) => {
             <LwdLogo pageName={pageName} />
             <div className="flex-grow"></div>
             <div className="flex items-center md:hidden p-2 ">
-                <button onClick={() => setMenuOpen(!isMenuOpen)} className={`p-3 rounded-lg shadow-md hover:text-black hover:bg-yellow-300`}>
+                <button onClick={() => setMenuOpen(!isMenuOpen)} className={`p-3 rounded-lg shadow-md`}>
                     {isMenuOpen ? <Close /> : <Menu />}
                 </button>
             </div>
-            <nav className={`w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "" : "hidden"}`}>
+            <nav className={`transition w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
                 <NavButton LinkTo="/resume">Resume</NavButton >
                 <NavButton LinkTo="/blog">Blog</NavButton >
                 <NavButton LinkTo="/portfolio">Portfolio</NavButton>
