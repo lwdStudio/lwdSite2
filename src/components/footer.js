@@ -50,7 +50,7 @@ const Footer = ({location, crumbLabel}) => {
                     {/* <Breadcrumb location={location} crumbLabel={crumbLabel} crumbSeparator=" > "></Breadcrumb> */}
                     <div className="grid grid-flow-row auto-rows-max lg:grid-flow-col lg:auto-cols-max p-5">
                         <FooterText>Copyright © {new Date().getFullYear()} Liwen Duan</FooterText>
-                        <FooterLink LinkTo="/tos">Terms of Service</FooterLink>
+                        <FooterLink LinkTo="/tos">Legal Terms</FooterLink>
                         <FooterLink LinkTo="http://beian.miit.gov.cn/">{data.site.siteMetadata.ICPlicense}</FooterLink>
                         <FooterLink LinkTo={data.site.siteMetadata.PSBeianURL}>{data.site.siteMetadata.PSBeian}</FooterLink>                      
                     </div>

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import './header.css'
 import Menu from "./static/menu.svg"
 import Close from "./static/close.svg"
 
@@ -38,10 +37,10 @@ const Header = ({pageName='lwdSite'}) => {
                 </button>
             </div>
             <nav className={`transition w-full md:flex md:flex-row md:w-auto ${isMenuOpen ? "visible" : "invisible md:visible md:h-auto h-0"}`}>
-                <NavButton LinkTo="/resume">Resume</NavButton >
-                <NavButton LinkTo="/blog">Blog</NavButton >
-                <NavButton LinkTo="/portfolio">Portfolio</NavButton>
+                <NavButton LinkTo="/blog">blog</NavButton >
+                <NavButton LinkTo="/portfolio">portfolio</NavButton>
                 <NavButton LinkTo="/service">lwdService</NavButton>
+                <NavButton LinkTo="/about">about me</NavButton >
             </nav>
         </header>
     )

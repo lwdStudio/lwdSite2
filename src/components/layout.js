@@ -2,7 +2,7 @@ import * as React from 'react'
 import Header from './header'
 import Footer from './footer'
 
-const Layout = ({ pageTitle, pageType, location, children}) => {
+const Layout = ({pageType, pageTitle=pageType, location, children}) => {
   return (
     <div>
       <title>{pageTitle} | lwdSite</title>
