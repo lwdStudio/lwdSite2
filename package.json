@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.15.5",
+    "@fontsource/noto-sans-sc": "^4.5.0",
+    "@fontsource/noto-serif-sc": "^4.5.0",
     "@sanity/block-content-to-react": "^3.0.0",
     "autoclean": "^1.0.2",
     "autoprefixer": "^10.3.4",
@@ -28,6 +30,7 @@
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sharp": "^3.13.0",
     "gatsby-plugin-sitemap": "^4.9.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-source-sanity": "^7.0.7",
     "gatsby-transformer-sharp": "^3.13.0",
