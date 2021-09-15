@@ -22,9 +22,9 @@ const BlogIndexPage = ({location, data}) => {
 export default BlogIndexPage
 
 export const query = graphql`
-query getPortfolioPost {
+query getBlogPost {
   allSanityPost(
-    filter: {contentType: {elemMatch: {title: {eq: "Portfolio"}}}}
+    filter: {contentType: {elemMatch: {title: {eq: "Blog"}}}}
     sort: {fields: publishedAt, order: ASC}
   ) {
     edges {
