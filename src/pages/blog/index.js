@@ -22,9 +22,6 @@ const BlogIndexPage = ({location, data}) => {
             )
           })
         }
-
-        <BlogCard tag="tag" link="/blog" title="Title of the Blog" excerpt="There are the overview of the blog. Some are important, some may not." />
-        <BlogCard tag="tag" link="/blog" title="Title of another Blog" excerpt="There are the overview of the blog. Some are important, some may not." />
       </div>
     </Layout>
   )
