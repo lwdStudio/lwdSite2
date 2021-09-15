@@ -10,16 +10,8 @@ const BlogIndexPage = ({location, data}) => {
         <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-800 py-2">All Blogs</h1>
         <p className="pb-4">Here are some articles I wrote for many things. Some for coursework, some might be personal.</p>
         {
-          data.allSanityPost.edges.map((Post) => {
-            return (
-              <BlogCard 
-                link={`/blog/${Post.node.slug.current}`} 
-                title={Post.node.title} 
-                tags={Post.node.tags} 
-                imgSrc={Post.node.mainImage&&Post.node.mainImage.asset.url} 
-                excerpt={Post.node.excerpt}
-              />
-            )
+          data.allSanityPost.edges.map((Posts) => {
+            return (<BlogCard posts={Posts}/>)
           })
         }
       </div>

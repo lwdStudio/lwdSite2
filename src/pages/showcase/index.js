@@ -12,13 +12,7 @@ const PortfolioIndex = ({location, data}) => {
         <p className="pb-4">Check out my portfolio here.</p>
         {
           data.allSanityPost.edges.map((Post) => {
-            <PortfolioCard 
-              link={`/blog/${Post.node.slug.current}`} 
-              title={Post.node.title} 
-              tags={Post.node.tags} 
-              imgSrc={Post.node.mainImage&&Post.node.mainImage.asset.url} 
-              excerpt={Post.node.excerpt}
-            />
+            <PortfolioCard posts={Post}/>
           })
         }
       </div>

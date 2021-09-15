@@ -14,14 +14,7 @@ const lwdServiceIndex = ({location, data}) => {
             data.allSanityLwdservice.edges.map((service) => {
               return (
                 <LwdServiceCard 
-                  iconUrl={service.node.serviceIcon.asset.url} 
-                  iconAlt={service.node.serviceIcon.caption} 
-                  ServiceName={service.node.serviceName} 
-                  ServiceUrl={service.node.serviceUrl} 
-                  ServiceDescription={service.node.serviceDescription}
-                  ServiceStatus={service.node.serviceStatus}
-                  ServicePoweredBy={service.node.servicePoweredBy}
-                  ServicePoweredByUrl={service.node.servicePoweredByUrl}
+                  Service={service}
                 />
               )
             })

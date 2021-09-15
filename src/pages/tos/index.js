@@ -10,9 +10,9 @@ const tosIndexPage = ({location, data}) => {
           <h1 className="text-5xl font-extrabold py-2">Terms of Use</h1>
           <p className="pb-4">When accessing this site, we assume that you have agreed to the following terms of use.</p>
           {
-            data.allSanityPage.edges.map((node) => {
+            data.allSanityPage.edges.map((pages) => {
               return (
-                  <PageCard title={node.node.title} link={`/tos/${node.node.slug.current}`}/>
+                  <PageCard pages={pages}/>
               )
             })
           }

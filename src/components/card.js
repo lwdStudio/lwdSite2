@@ -3,75 +3,80 @@ import {Link} from 'gatsby'
 // import {GatsbyImage} from 'gatsby-plugin-image'
 
 
-export const BlogCard = ({tags, link, title, excerpt, imgSrc, imgAlt}) => {
+export const BlogCard = ({posts}) => {
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
-            <img 
-                className="w-auto md:h-32 rounded-lg"
-                src={imgSrc}
-                alt={imgAlt}
-            />
+            <div className="w-50 md:h-32 rounded-lg shadow-md">
+                <img 
+                    className="w-full md:w-50 md:h-32 rounded-lg object-cover"
+                    src={posts.node.mainImage&&posts.node.mainImage.asset.url}
+                    alt={posts.node.mainImage&&posts.node.mainImage.asset.altText}
+                />
+            </div>
+            
             <div className="flex-col p-5 content-center">
                 {
-                console.log(tags)
+                console.log(posts.node.tag)
                 // tags.map((tag) => {
                 //     return(<span className="text-sm font-bold text-green-500">#{tag}</span>)
                 // })}
                 }
-                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={link} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{title}</Link></h2>
-                <div className="text-md font-regular text-gray-500">{excerpt}</div>
+                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/blog/${posts.node.slug.current}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{posts.node.title}</Link></h2>
+                <div className="text-md font-regular text-gray-500">{posts.node.excerpt}</div>
             </div>
         </div>
     )
 }
 
-export const PageCard = ({tag, link, title}) => {
+export const PageCard = ({pages}) => {
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
             <div className="flex-col p-5 content-center">
-              <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={link} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{title}</Link></h2>
+              <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/tos/${pages.node.slug.current}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{pages.node.title}</Link></h2>
             </div>
         </div>
     )
 }
 
-export const PortfolioCard = ({tags, link, title, excerpt, imgSrc, imgAlt}) => {
+export const PortfolioCard = ({posts}) => {
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
-            <img 
-                className="w-auto md:h-56 rounded-lg"
-                src={imgSrc}
-                alt={imgAlt}
-            />
+            <div className="w-50 md:h-32 rounded-lg shadow-md">
+                <img 
+                    className="w-full md:w-50 md:h-32 rounded-lg object-cover"
+                    src={posts.node.mainImage&&posts.node.mainImage.asset.url}
+                    alt={posts.node.mainImage&&posts.node.mainImage.asset.altText}
+                />
+            </div>
             <div className="flex-col p-5 content-center">
                 {
-                console.log(tags)
+                console.log(posts.node.tag)
                 // tags.map((tag) => {
                 //     return(<span className="text-sm font-bold text-green-500">#{tag}</span>)
                 // })}
                 }
-                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={link} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{title}</Link></h2>
-                <div className="text-md font-regular text-gray-500">{excerpt}</div>
+                <h2 className="text-2xl font-bold text-blue-700 py-1"><Link to={`/showcase/${posts.node.slug.current}`} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5">{posts.node.title}</Link></h2>
+                <div className="text-md font-regular text-gray-500">{posts.node.excerpt}</div>
             </div>
         </div>
     )
 }
 
-export const LwdServiceCard = ({iconUrl, iconAlt, ServiceName, ServiceUrl, ServiceDescription, ServiceStatus, ServicePoweredBy, ServicePoweredByUrl}) => {
+export const LwdServiceCard = ({Service}) => {
     return (
         <div className="flex flex-col w-64 h-auto rounded-lg shadow-md m-5">
             <div className="w-64 h-32 rounded-lg shadow-md">
                 <img className="w-60 h-32 object-scale-down align-center p-5"
-                    src={iconUrl}
-                    alt={iconAlt}
+                    src={Service.node.serviceIcon.asset.url}
+                    alt={Service.node.serviceIcon.caption}
                 />
             </div>
             <div className="flex-col p-5 content-center">
-                <span className="text-sm font-bold text-green-500">{ServiceDescription}</span>
-                <h2 className={`text-2xl font-bold py-1 ${ServiceStatus==="operational" ? "text-blue-700" : "text-red-500"}`}>
-                    <a href={ServiceUrl} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5" target="_blank" rel="noreferrer">{ServiceName}</a>                 
+                <span className="text-sm font-bold text-green-500">{Service.node.serviceDescription}</span>
+                <h2 className={`text-2xl font-bold py-1 ${Service.node.serviceStatus==="operational" ? "text-blue-700" : "text-red-500"}`}>
+                    <a href={Service.node.serviceUrl} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5" target="_blank" rel="noreferrer">{Service.node.serviceName}</a>                 
                 </h2>
-                <p>Powered by <a href={ServicePoweredByUrl} target="_blank" rel="noreferrer" className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md">{ServicePoweredBy}</a></p>
+                <p>Powered by <a href={Service.node.servicePoweredByUrl} target="_blank" rel="noreferrer" className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md">{Service.node.servicePoweredBy}</a></p>
             </div>
         </div>
     )
