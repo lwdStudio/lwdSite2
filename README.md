@@ -43,3 +43,5 @@
     🔜 Add dark mode support.
     🔜 Maybe a video for index's hero.
     🔜 SEO
+    🔜 External Link Icon
+
