@@ -45,8 +45,8 @@ query getPortfolioPost {
           asset {
             url
             title
-            altText
           }
+          caption
         }
         excerpt
       }

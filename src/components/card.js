@@ -10,7 +10,7 @@ export const BlogCard = ({posts}) => {
                 <img 
                     className="w-full md:w-50 md:h-32 rounded-lg object-cover"
                     src={posts.node.mainImage&&posts.node.mainImage.asset.url}
-                    alt={posts.node.mainImage&&posts.node.mainImage.asset.altText}
+                    alt={posts.node.mainImage&&posts.node.mainImage.caption}
                 />
             </div>
             
@@ -45,7 +45,7 @@ export const PortfolioCard = ({posts}) => {
                 <img 
                     className="w-full md:w-50 md:h-32 rounded-lg object-cover"
                     src={posts.node.mainImage&&posts.node.mainImage.asset.url}
-                    alt={posts.node.mainImage&&posts.node.mainImage.asset.altText}
+                    alt={posts.node.mainImage&&posts.node.mainImage.caption}
                 />
             </div>
             <div className="flex-col p-5 content-center rounded-b-lg">
