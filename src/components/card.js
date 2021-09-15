@@ -14,7 +14,7 @@ export const BlogCard = ({posts}) => {
                 />
             </div>
             
-            <div className="flex-col p-5 content-center">
+            <div className="flex-col p-5 content-center rounded-b-lg">
                 {
                 console.log(posts.node.tag)
                 // tags.map((tag) => {
@@ -48,7 +48,7 @@ export const PortfolioCard = ({posts}) => {
                     alt={posts.node.mainImage&&posts.node.mainImage.asset.altText}
                 />
             </div>
-            <div className="flex-col p-5 content-center">
+            <div className="flex-col p-5 content-center rounded-b-lg">
                 {
                 console.log(posts.node.tag)
                 // tags.map((tag) => {
@@ -71,7 +71,7 @@ export const LwdServiceCard = ({Service}) => {
                     alt={Service.node.serviceIcon.caption}
                 />
             </div>
-            <div className="flex-col p-5 content-center">
+            <div className="flex-col p-5 content-center rounded-b-lg">
                 <span className="text-sm font-bold text-green-500">{Service.node.serviceDescription}</span>
                 <h2 className={`text-2xl font-bold py-1 ${Service.node.serviceStatus==="operational" ? "text-blue-700" : "text-red-500"}`}>
                     <a href={Service.node.serviceUrl} className="hover:text-black focus:text-black hover:bg-gray-200 focus:bg-yellow-300 rounded-md p-0.5" target="_blank" rel="noreferrer">{Service.node.serviceName}</a>                 
