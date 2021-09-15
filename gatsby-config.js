@@ -57,5 +57,29 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `lwdSite`,
+        short_name: `lwdSite`,
+        description: `This website help you learn more about me.`,
+        lang:`en`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/images/lwd-stamp-mono-red.svg`,      
+        localize: [
+          {
+            start_url: `/zh/`,
+            lang: `zh`,
+            name: `这里是力文`,
+            short_name: `这里是力文`,
+            description: `你可以通过这个网站了解我`,
+          },
+        ],
+      },
+
+    },
   ]
 };
