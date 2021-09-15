@@ -12,15 +12,13 @@ const PortfolioIndex = ({location, data}) => {
         <p className="pb-4">Check out my portfolio here.</p>
         {
           data.allSanityPost.edges.map((Post) => {
-            console.log(Post.node.mainImage)
-            if (Post.node.mainImage) {
-              return (
-                <PortfolioCard link={`/blog/${Post.node.slug.current}`} title={Post.node.title} tags={Post.node.tags} imgSrc={Post.node.mainImage.asset.url} />
-              )
-            }
-            return (
-              <PortfolioCard link={`/blog/${Post.node.slug.current}`} title={Post.node.title} tags={Post.node.tags}/>
-            )
+            <PortfolioCard 
+              link={`/blog/${Post.node.slug.current}`} 
+              title={Post.node.title} 
+              tags={Post.node.tags} 
+              imgSrc={Post.node.mainImage&&Post.node.mainImage.asset.url} 
+              excerpt={Post.node.excerpt}
+            />
           })
         }
       </div>
@@ -32,7 +30,10 @@ export default PortfolioIndex
 
 export const query = graphql`
 query getPortfolioPost {
-  allSanityPost(filter: {contentType: {elemMatch: {title: {eq: "Portfolio"}}}}) {
+  allSanityPost(
+    filter: {contentType: {elemMatch: {title: {eq: "Portfolio"}}}}
+    sort: {fields: publishedAt, order: ASC}
+  ) {
     edges {
       node {
         id
@@ -53,6 +54,7 @@ query getPortfolioPost {
             altText
           }
         }
+        excerpt
       }
     }
   }

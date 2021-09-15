@@ -11,14 +11,14 @@ const BlogIndexPage = ({location, data}) => {
         <p className="pb-4">Here are some articles I wrote for many things. Some for coursework, some might be personal.</p>
         {
           data.allSanityPost.edges.map((Post) => {
-            console.log(Post.node.mainImage)
-            if (Post.node.mainImage) {
-              return (
-                <BlogCard link={`/blog/${Post.node.slug.current}`} title={Post.node.title} tags={Post.node.tags} imgSrc={Post.node.mainImage.asset.url} />
-              )
-            }
             return (
-              <BlogCard link={`/blog/${Post.node.slug.current}`} title={Post.node.title} tags={Post.node.tags}/>
+              <BlogCard 
+                link={`/blog/${Post.node.slug.current}`} 
+                title={Post.node.title} 
+                tags={Post.node.tags} 
+                imgSrc={Post.node.mainImage&&Post.node.mainImage.asset.url} 
+                excerpt={Post.node.excerpt}
+              />
             )
           })
         }
@@ -31,7 +31,10 @@ export default BlogIndexPage
 
 export const query = graphql`
 query getBlogPost {
-  allSanityPost(filter: {contentType: {elemMatch: {title: {eq: "Blog"}}}}) {
+  allSanityPost(
+    filter: {contentType: {elemMatch: {title: {eq: "Blog"}}}}
+    sort: {fields: publishedAt, order: ASC}
+  ) {
     edges {
       node {
         id
@@ -52,6 +55,7 @@ query getBlogPost {
             altText
           }
         }
+        excerpt
       }
     }
   }
