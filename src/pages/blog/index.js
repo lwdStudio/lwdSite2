@@ -22,7 +22,7 @@ const BlogIndexPage = ({location, data}) => {
 export default BlogIndexPage
 
 export const query = graphql`
-query getBlogPost {
+query getBlogPosts {
   allSanityPost(
     filter: {contentType: {elemMatch: {title: {eq: "Blog"}}}}
     sort: {fields: publishedAt, order: ASC}
@@ -42,8 +42,6 @@ query getBlogPost {
         }
         mainImage {
           asset {
-            url
-            title
             gatsbyImageData
           }
           caption

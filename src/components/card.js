@@ -1,16 +1,16 @@
 import React from 'react'
 import {Link} from 'gatsby'
-// import {GatsbyImage} from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 
 export const BlogCard = ({posts}) => {
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
-            <div className="w-50 md:h-32 rounded-lg shadow-md">
-                <img 
-                    className="w-full md:w-50 md:h-32 rounded-lg object-cover"
-                    src={posts.node.mainImage&&posts.node.mainImage.asset.url}
+            <div className="rounded-lg shadow-md">
+                <GatsbyImage 
+                    className="w-full md:w-52 md:h-32 rounded-lg object-cover"
                     alt={posts.node.mainImage&&posts.node.mainImage.caption}
+                    image={posts.node.mainImage&&posts.node.mainImage.asset.gatsbyImageData}
                 />
             </div>
             
@@ -41,11 +41,11 @@ export const PageCard = ({pages}) => {
 export const PortfolioCard = ({posts}) => {
     return (
         <div className="flex flex-col md:flex-row rounded-lg shadow-md mb-5">
-            <div className="w-50 md:h-32 rounded-lg shadow-md">
-                <img 
-                    className="w-full md:w-50 md:h-32 rounded-lg object-cover"
-                    src={posts.node.mainImage&&posts.node.mainImage.asset.url}
+            <div className="rounded-lg shadow-md">
+                <GatsbyImage 
+                    className="w-full md:w-52 md:h-32 rounded-lg object-cover"
                     alt={posts.node.mainImage&&posts.node.mainImage.caption}
+                    image={posts.node.mainImage&&posts.node.mainImage.asset.gatsbyImageData}
                 />
             </div>
             <div className="flex-col p-5 content-center rounded-b-lg">
@@ -65,8 +65,15 @@ export const PortfolioCard = ({posts}) => {
 export const LwdServiceCard = ({Service}) => {
     return (
         <div className="flex flex-col w-64 h-auto rounded-lg shadow-md m-5">
+            {/* <div className="rounded-lg shadow-md">
+                <GatsbyImage 
+                    className="w-64 h-32 object-scale-down justify-items-center p-5"
+                    alt={Service.node.serviceIcon&&Service.node.serviceIcon.caption}
+                    image={Service.node.serviceIcon&&Service.node.serviceIcon.asset.gatsbyImageData}
+                />
+            </div> */}
             <div className="w-64 h-32 rounded-lg shadow-md">
-                <img className="w-60 h-32 object-scale-down align-center p-5"
+                <img className="w-64 h-32 object-scale-down justify-items-center p-5"
                     src={Service.node.serviceIcon.asset.url}
                     alt={Service.node.serviceIcon.caption}
                 />

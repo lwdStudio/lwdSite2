@@ -21,15 +21,16 @@ module.exports = {
     {
       resolve: `gatsby-source-sanity`,
       options: {
-        projectId: `dfbozjza`,
-        dataset: `production`,
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
         // a token with read permissions is required
         // if you have a private dataset
-        token: process.env.SANITY_TOKEN,
+        // token: process.env.SANITY_TOKEN,
 
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',
+        watchMode: 'true',
       },
     },
     'gatsby-plugin-postcss',

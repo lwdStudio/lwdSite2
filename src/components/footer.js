@@ -2,7 +2,6 @@ import React from 'react'
 import { LwdLink } from './link'
 import { StaticImage } from 'gatsby-plugin-image'
 import { StaticQuery,graphql } from 'gatsby'
-import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 const FooterText = ({children}) => {
     return (
@@ -18,7 +17,7 @@ const FooterLink = ({LinkTo, children},props) => {
     )
 }
 
-const Footer = ({location, crumbLabel}) => {
+const Footer = () => {
     return (
         <StaticQuery 
             query={graphql`
@@ -50,7 +49,6 @@ const Footer = ({location, crumbLabel}) => {
                         </div>
                     </FooterLink>
                     
-                    {/* <Breadcrumb location={location} crumbLabel={crumbLabel} crumbSeparator=" > "></Breadcrumb> */}
                     <div className="grid grid-flow-row auto-rows-max lg:grid-flow-col lg:auto-cols-max p-5">
                         <FooterText>Copyright © {new Date().getFullYear()} Liwen Duan</FooterText>
                         <FooterLink LinkTo="/tos">Legal Terms</FooterLink>
