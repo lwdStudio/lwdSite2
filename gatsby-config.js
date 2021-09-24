@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.liwenduan.com",
@@ -56,7 +60,7 @@ module.exports = {
           // all other properties optional
           crumbSeparator: " > ",
         },
-      },
+      }, 
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -80,7 +84,6 @@ module.exports = {
           },
         ],
       },
-
     },
   ]
 };
